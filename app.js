@@ -6,7 +6,8 @@ const PORT = 8081;
 const app = express();
 
 //Configs............................................................
-app.set('view engine', 'ejs'); //Inform to EXPRESS that view engine is EJS.
+app.set('view engine', 'ejs'); //Inform to EXPRESS that the view engine is the EJS.
+app.use(express.static('public')); //Inform the directory of static files
 
 //Routes.............................................................
 app.get('/', (req, res) => {
