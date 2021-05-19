@@ -10,7 +10,7 @@ app.set('view engine', 'ejs'); //Inform to EXPRESS that view engine is EJS.
 
 //Routes.............................................................
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {title: "Início"});
 })
 
 
