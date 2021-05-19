@@ -14,6 +14,9 @@ app.get('/', (req, res) => {
     res.render('index', {title: "Início"});
 })
 
+app.get('/askquestion', (req, res) => {
+    res.render('askquestion', {title: "Faça sua pergunta!"});
+})
 
 
 
