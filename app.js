@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const connection = require('./database/mysql');
+const modelQuestion = require('./models/Question');
 
 //Variables...........................................................
 const PORT = 8081;
