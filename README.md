@@ -2,7 +2,7 @@
 
 ### Plataforma de perguntas e respostas ao estilo Yahoo respostas.
 
-	- Objetivo do projeto é aprender e praticar com NODEJS.
+- Objetivo do projeto é aprender e praticar com NODEJS.
 
 
 ## Let's Code!
