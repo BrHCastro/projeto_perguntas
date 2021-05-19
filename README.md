@@ -9,5 +9,5 @@
 
 * Ferramentas utilizadas no projeto:
 
-	- [x] Express: `npm install express --save`
-	- [x] Embedded JavaScript templating: `npm insatall ejs --save`
+	- [x] [Express](https://expressjs.com/pt-br/): `npm install express --save`
+	- [x] Embedded JavaScript templating [EJS](https://ejs.co/): `npm insatall ejs --save`
