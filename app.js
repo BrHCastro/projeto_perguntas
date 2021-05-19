@@ -1,6 +1,7 @@
 //Imports.............................................................
 const express = require('express');
 const bodyParser = require('body-parser');
+const connection = require('./database/mysql');
 
 //Variables...........................................................
 const PORT = 8081;
@@ -12,6 +13,14 @@ app.use(express.static('public')); //Inform the directory of static files
 
 app.use(bodyParser.urlencoded({extended: false})) //Translate form data to JSON
 app.use(bodyParser.json());
+
+//Mysql..............................................................
+connection.authenticate()
+    .then(() => {
+        console.log('Connected on MySql');
+    }).catch((err) => {
+        console.log(err);
+    });
 
 //Routes.............................................................
 app.get('/', (req, res) => {
