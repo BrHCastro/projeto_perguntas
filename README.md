@@ -11,3 +11,4 @@
 
 	- [x] [Express](https://expressjs.com/pt-br/): `npm install express --save`
 	- [x] Embedded JavaScript templating [EJS](https://ejs.co/): `npm insatall ejs --save`
+	- [x] [Bootstrap](https://getbootstrap.com/) Currently v5.0.1
