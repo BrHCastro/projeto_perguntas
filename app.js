@@ -3,6 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const connection = require('./database/mysql');
 const modelQuestion = require('./models/Question');
+const moment = require('moment')
+const localization = require('moment/locale/pt-br')
 
 //Variables...........................................................
 const PORT = 8081;
@@ -27,7 +29,11 @@ connection.authenticate()
 app.get('/', (req, res) => {
     modelQuestion.findAll({ raw: true }).then((questions) => {
         // console.log(questions);
-        res.render('index', {title: "Início", questions: questions});
+        res.render('index', {
+            title: "Início", 
+            questions: questions, 
+            subStringRt, momentRt
+        });
     }).catch((err) => {
         console.log(`Erro ao selecionar os dados: ${err}`);
     });
@@ -50,6 +56,14 @@ app.post('/savequestion', (req, res) => {
     })
 });
 
+//Functions...........................................................
+let subStringRt = ((str) => {
+    return str.substring(0, 400) + '...'
+});
+
+let momentRt = ((dt) => {
+    return moment(dt).fromNow();
+});
 
 
 //Server..............................................................
