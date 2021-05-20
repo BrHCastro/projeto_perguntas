@@ -72,6 +72,24 @@ app.get('/viewquestion/:id', (req, res) => {
     });
 });
 
+app.post('/saveanswers', (req, res) => {
+    let body = req.body.answer;
+    let id = req.body.identify;
+
+    // console.log(id);
+    // console.log(body);
+
+    modelAnswer.create({
+        questId: id,
+        body: body
+    }).then(() => {
+        res.redirect(`/viewquestion/${id}`);
+    }).catch((err) => {
+        console.log(`Error Create Answer: ${err}`);
+        res.redirect('/');
+    });
+});
+
 //Functions...........................................................
 let subStringRt = ((str) => {
     return str.substring(0, 400) + '...'
