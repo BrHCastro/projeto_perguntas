@@ -13,9 +13,14 @@
         </div>
         <div class="card-body">
             <p><%= question.description %></p>
+            <hr>
+            <p><i>Nenhuma resposta...</i></p>
         </div>
         <div class="card-footer">
-            <button class="btn btn-primary">Responder</button>
+            <form action="#" method="post">
+                <textarea class="form-control" name="answer" placeholder="Digite sua resposta..."></textarea>
+                <button type="submit" class="btn btn-primary mt-2">Publique sua resposta</button>
+            </form>
         </div>
     </div>
 </div>
