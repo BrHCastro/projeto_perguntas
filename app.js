@@ -56,6 +56,21 @@ app.post('/savequestion', (req, res) => {
     })
 });
 
+app.get('/viewquestion/:id', (req, res) => {
+    let id = req.params.id;
+    modelQuestion.findOne({
+        where: {id:id}
+    }).then(question => {
+        if (question != undefined)
+            res.render('question', {question:question});
+        else
+            res.redirect('/');
+        
+    }).catch((err) => {
+        console.log(`Erro ao localizar a Pergunta solicitada: ${err}`);
+    });
+});
+
 //Functions...........................................................
 let subStringRt = ((str) => {
     return str.substring(0, 400) + '...'
