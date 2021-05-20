@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const connection = require('./database/mysql');
 const modelQuestion = require('./models/Question');
+const modelAnswer = require('./models/Answer');
 const moment = require('moment')
 const localization = require('moment/locale/pt-br')
 

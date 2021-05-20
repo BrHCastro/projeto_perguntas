@@ -14,9 +14,9 @@ const Question = connection.define('question', {
 
 Question.sync({force: false})
     .then(() => {
-        console.log('Created table');
+        console.log('Created table question');
     }).catch((err) => {
-        console.log(`Erro ao criar tabela: ${err}`);
+        console.log(`Erro ao criar tabela question: ${err}`);
     })
 
 module.exports = Question;
