@@ -9,6 +9,10 @@ body {
     background-color: rgba(204, 204, 204, 0.4);
 }
 
+.ck.ck-editor__main > .ck-editor__editable {
+    height: 170px;
+}
+
 .card-header h3 > a {
     text-decoration: none;
 }

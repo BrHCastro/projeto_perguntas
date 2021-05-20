@@ -18,7 +18,8 @@
         </div>
         <div class="card-footer">
             <form action="#" method="post">
-                <textarea class="form-control" name="answer" placeholder="Digite sua resposta..."></textarea>
+                <input type="hidden" name="identify" value="<%= question.id %>">
+                <textarea class="form-control" id="editor" name="answer" placeholder="Digite sua resposta..."></textarea>
                 <button type="submit" class="btn btn-primary mt-2">Publique sua resposta</button>
             </form>
         </div>
