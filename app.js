@@ -25,7 +25,12 @@ connection.authenticate()
 
 //Routes.............................................................
 app.get('/', (req, res) => {
-    res.render('index', {title: "Início"});
+    modelQuestion.findAll({ raw: true }).then((questions) => {
+        // console.log(questions);
+        res.render('index', {title: "Início", questions: questions});
+    }).catch((err) => {
+        console.log(`Erro ao selecionar os dados: ${err}`);
+    });
 })
 
 app.get('/askquestion', (req, res) => {
@@ -35,7 +40,14 @@ app.get('/askquestion', (req, res) => {
 app.post('/savequestion', (req, res) => {
     let title = req.body.title;
     let desc = req.body.desc;
-    res.send(`Título: ${title} / Descrição: ${desc}`);
+    modelQuestion.create({
+        title: title,
+        description: desc
+    }).then(() => {
+        res.redirect('/')
+    }).catch((err) => {
+        console.log(`Error Create Question: ${err}`);
+    })
 });
 
 
