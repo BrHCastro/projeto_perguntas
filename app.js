@@ -62,10 +62,15 @@ app.get('/viewquestion/:id', (req, res) => {
     modelQuestion.findOne({
         where: {id:id}
     }).then(question => {
-        if (question != undefined)
-            res.render('question', {title:question.title,momentRt,question:question});
-        else
+        if (question != undefined) {
+            modelAnswer.findAll({
+                where:{questId: question.id}
+            }).then(answers => {
+                res.render('question', {title:question.title,momentRt,question:question, answers:answers});
+            })
+        } else {
             res.redirect('/');
+        }
         
     }).catch((err) => {
         console.log(`Erro ao localizar a Pergunta solicitada: ${err}`);

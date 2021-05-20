@@ -14,7 +14,19 @@
         <div class="card-body">
             <p><%= question.description %></p>
             <hr>
-            <p><i>Nenhuma resposta...</i></p>
+            <% if(answers.length > 0){ %>
+                <h5><%= answers.length %> Respostas</h5>
+                <% answers.forEach(answer => { %>
+                    <div class="card mt-2">
+                        <div class="card-footer">
+                            <%- answer.body %>
+                            <small><i><%= momentRt(answer.updatedAt) %></i></small>
+                        </div>
+                    </div>
+                    <% }) %>
+            <% }else{ %>
+                <p><i>Nenhuma resposta.</i></p>
+            <% } %>
         </div>
         <div class="card-footer">
             <form action="/saveanswers" method="post">
