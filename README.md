@@ -18,6 +18,6 @@
 	- [x] [CKEditor 5](https://ckeditor.com/ckeditor-5/features/)
 
 ## Projeto finalizado:
-Veja funcionando [AQUI](https://salty-harbor-78125.herokuapp.com/)
+Veja funcionando <a href="https://salty-harbor-78125.herokuapp.com/" target="_blank" >AQUI</a>
 
 < Desenvolvido com :heart: por Henrique de Castro. />
