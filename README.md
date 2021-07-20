@@ -1,4 +1,4 @@
-# Projeto Perguntas e Respostas.
+# :calendar: Projeto Perguntas e Respostas.
 
 ### Plataforma de perguntas e respostas ao estilo Yahoo respostas.
 
