@@ -8,7 +8,7 @@ const moment = require('moment')
 const localization = require('moment/locale/pt-br')
 
 //Variables...........................................................
-const PORT = 8081;
+const PORT = process.env.PORT || 8081;
 const app = express();
 
 //Configs............................................................
@@ -80,9 +80,6 @@ app.get('/viewquestion/:id', (req, res) => {
 app.post('/saveanswers', (req, res) => {
     let body = req.body.answer;
     let id = req.body.identify;
-
-    // console.log(id);
-    // console.log(body);
 
     modelAnswer.create({
         questId: id,

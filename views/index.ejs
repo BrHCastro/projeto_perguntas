@@ -13,7 +13,7 @@
                 <span><i><%= momentRt(qs.updatedAt) %></i></span>
             </div>
             <div class="card-body">
-                <p><%= subStringRt(qs.description) %></p>
+                <%- subStringRt(qs.description) %>
             </div>
             <div class="card-footer">
                 <a href="/viewquestion/<%= qs.id %>"><button class="btn btn-primary">Responder</button></a>

@@ -12,7 +12,7 @@
             <span><i><%= momentRt(question.updatedAt) %></i></span>
         </div>
         <div class="card-body">
-            <p><%= question.description %></p>
+            <%- question.description %>
             <hr>
             <% if(answers.length > 0){ %>
                 <h5><%= answers.length %> Respostas</h5>

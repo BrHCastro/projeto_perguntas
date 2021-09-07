@@ -12,11 +12,11 @@ const Answer = connection.define('answers', {
     }
 });
 
-Answer.sync({force: false})
-    .then(() => {
-        console.log('Created table answers');
-    }).catch((err) => {
-        console.log(`Erro ao criar tabela answers: ${err}`);
-    });
+// Answer.sync({force: false})
+//     .then(() => {
+//         console.log('Created table answers');
+//     }).catch((err) => {
+//         console.log(`Erro ao criar tabela answers: ${err}`);
+//     });
 
 module.exports = Answer
